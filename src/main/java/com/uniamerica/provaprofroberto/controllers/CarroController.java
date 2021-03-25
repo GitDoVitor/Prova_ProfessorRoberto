@@ -26,14 +26,14 @@ public class CarroController {
         return new ResponseEntity<>(carro, null, HttpStatus.CREATED);
     }
 
-    @GetMapping("/marca/{id}")
-    List<Carro> listaPorMarca(@PathVariable Long id) {
-        return carroService.listaPorMarca(id);
+    @GetMapping("/marca/{marca}")
+    List<Carro> listaPorMarca(@PathVariable String marca) {
+        return carroService.listaPorMarca(marca);
     }
 
-    @GetMapping("/modelo/{id}")
-    List<Carro> listaPorModelo(@PathVariable Long id) {
-        return carroService.listaPorModelo(id);
+    @GetMapping("/modelo/{modelo}")
+    List<Carro> listaPorModelo(@PathVariable String modelo) {
+        return carroService.listaPorModelo(modelo);
     }
 
     @GetMapping()

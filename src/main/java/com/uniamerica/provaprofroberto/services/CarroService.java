@@ -33,12 +33,12 @@ public class CarroService {
         carroRepository.deleteById(id);
     }
 
-    public List<Carro> listaPorModelo(Long id) {
-        return carroRepository.findAllByModelo_Id(id);
+    public List<Carro> listaPorModelo(String modelo) {
+        return carroRepository.findAllByModelo_Modelo(modelo);
     }
 
-    public List<Carro> listaPorMarca(Long id) {
-        return carroRepository.findAllByMarca_Id(id);
+    public List<Carro> listaPorMarca(String marca) {
+        return carroRepository.findAllByMarca_Marca(marca);
     }
 
     public Carro listaPorPlaca(String placa) {

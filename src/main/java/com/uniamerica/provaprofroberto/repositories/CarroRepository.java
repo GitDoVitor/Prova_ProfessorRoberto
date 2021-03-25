@@ -10,7 +10,7 @@ import java.util.List;
 
 @Repository
 public interface CarroRepository extends JpaRepository<Carro, Long> {
-    List<Carro> findAllByMarca_Id(Long marca_id);
-    List<Carro> findAllByModelo_Id(Long modelo_id);
+    List<Carro> findAllByMarca_Marca(String marca);
+    List<Carro> findAllByModelo_Modelo(String modelo);
     Carro findByPlaca(String placa);
 }
